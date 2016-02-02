@@ -1,0 +1,38 @@
+{% load staticfiles %}
+<header class="main-header row">
+    <header class="visible-xs">
+        <a class="side-panel__heading" href="{% url 'home' %}">
+            <img class="side-panel__logo" src="{% static 'img/logo.png' %}">
+            <h4>
+                {{ SKIN.console_app_name }}
+            </h4>
+        </a>
+    </header>
+    <nav class="col-sm-5 main-header__nav">
+        <a href="{% url 'home' %}">
+            {% trans "Dashboard" %}
+        </a>
+
+        <a href="{% url 'stats' %}">
+            {% trans "Stats" %}
+        </a>
+        <a href="{% url 'admin_list' %}">
+            {% trans "Admins" %}
+        </a>
+
+        <a class="visible-xs-inline-block" href="{% url 'profile' %}">
+            {% trans "Profile" %}
+        </a>
+    </nav>
+    <div class="col-sm-7 main-header__user-info">
+        <a class="btn hidden-xs" href="{% url 'profile' %}">
+            {{ user.email }}</a>
+
+        <form class="inline-form" action="{% url 'logout' %}" method="POST">
+            {% csrf_token %}
+            <button class="btn btn-danger" type="submit">
+                {% trans "Logout" %}
+            </button>
+        </form>
+    </div>
+</header>

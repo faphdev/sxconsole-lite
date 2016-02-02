@@ -1,0 +1,188 @@
+{% extends BASE_TEMPLATE %}
+{% load sizefieldtags staticfiles sxconsole %}
+
+{% block main %}
+    <div class="page-header">
+        <h3 class="row">
+            <div class="col-sm-8">
+                {{ cluster | icon }}
+                <span class="js-trunc">{{ cluster }}</span>
+            </div>
+            <div class="col-sm-4 text-right" title="{% trans "SX Enterprise only" %}">
+                <a class="btn btn-default disabled" href="#">
+                    {% trans "Settings" %}
+                </a>
+                <a class="btn btn-danger disabled" href="#">
+                    {% trans "Delete" %}
+                </a>
+            </div>
+        </h3>
+    </div>
+
+    <div class="well">
+        <div class="row">
+            {% trans "Unlimited" as unlimited %}
+            <div class="col-xs-6 col-sm-3">
+                <p class="text-center">
+                    <span class="fa fa-archive fa-2x text-primary"></span>
+                    <br>
+                    {% trans "Volumes" %}
+                    <br>
+                    {% blocktrans with volumes=cluster.volumes|length limit=cluster.max_volumes|default:unlimited %}
+                        {{ volumes }} of {{ limit }}
+                    {% endblocktrans %}
+                </p>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <p class="text-center">
+                    <span class="fa fa-user fa-2x text-primary"></span>
+                    <br>
+                    {% trans "Users" %}
+                    <br>
+                    {% blocktrans with users=cluster.users|length limit=cluster.max_users|default:unlimited %}
+                        {{ users }} of {{ limit }}
+                    {% endblocktrans %}
+                </p>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <p class="text-center">
+                    <span class="fa fa-tachometer fa-2x text-primary"></span>
+                    <br>
+                    {% trans "Allocated size" %}
+                    <br>
+                    {{ cluster.get_allocated_size_display }}
+                </p>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <p class="text-center">
+                    <span class="fa fa-pie-chart fa-2x text-primary"></span>
+                    <br>
+                    {% trans "Usage" %}
+                    <br>
+                    {{ cluster.get_used_size_display }}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <ul id="cluster-tabs" class="nav nav-tabs">
+            <li><a href="#volumes" data-toggle="tab">{% trans "Volumes" %}</a></li>
+            <li><a href="#users" data-toggle="tab">{% trans "Users" %}</a></li>
+            <li class="disabled" title="{% trans "SX Enterprise only" %}"><a href="#">{% trans "Administrators" %}</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane" id="volumes">
+                <p>
+                    <a class="btn btn-default" href="{% url 'add_volume' %}">
+                        {% trans "Add a volume" %}
+                    </a>
+                </p>
+                {% if cluster.volumes %}
+                    <div class="table-responsive">
+                        <table class="table-common">
+                            <thead>
+                                <th>{% trans "Name" %}</th>
+                                <th>{% trans "Usage" %}</th>
+                                <th>{% trans "Size" %}</th>
+                                <th>{% trans "Replicas" %}</th>
+                                <th>{% trans "Revs" %}</th>
+                                <th>{% trans "Actions" %}</th>
+                            </thead>
+                            <tbody>
+                                {% for v in cluster.volumes %}
+                                    <tr>
+                                        <td>
+                                            <span class="js-trunc">
+                                                {{ v.name }}
+                                            </span>
+                                            {% if v.encryption %}
+                                                <span class="fa fa-lock" title="{% trans "This volume is encrypted" %}"></span>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            {{ v.used_size | filesize }}
+                                            {% widthratio v.used_size v.size 100 as percentage %}
+                                            ({{ percentage }}%)
+                                        </td>
+                                        <td> {{ v.size | filesize }} </td>
+                                        <td> {{ v.replicas }} </td>
+                                        <td> {{ v.revisions }} </td>
+                                        <td>
+                                            <a class="btn btn-default btn-xs" href="{% url 'volume_acl' v.name %}"
+                                                    title="{% trans "Manage ACL" %}">
+                                                    <img src="{% static 'img/acl.png' %}" style="height: 1em; width: auto;">
+                                            </a>
+                                            <a class="btn btn-default btn-xs" href="{% url 'edit_volume' v.name %}"
+                                                    title="{% trans "Settings" %}">
+                                                <span class="fa fa-cog fa-fw"></span>
+                                            </a>
+                                            <a class="btn btn-danger btn-xs" href="{% url 'delete_volume' v.name %}"
+                                                    title="{% trans "Delete" %}">
+                                                <span class="fa fa-times fa-fw"></span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% else %}
+                    <span class="text-muted">{% trans "There are no volumes yet" %}</span>
+                {% endif %}
+            </div>
+
+            <div class="tab-pane" id="users">
+                <p>
+                    <a class="btn btn-default" href="{% url 'add_user' %}">
+                        {% trans "Add a user" %}
+                    </a>
+                </p>
+                {% if cluster.users %}
+                    <div class="table-responsive">
+                        <table class="table-common">
+                            <thead>
+                                <tr>
+                                    <th>{% trans "Username" %}</th>
+                                    <th>{% trans "Actions" %}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for u in cluster.users %}
+                                    <tr>
+                                        <td>
+                                            <span>{{ u.email }}</span>
+                                        </td>
+                                        <td>
+                                            {% if not u.is_reserved %}
+                                                {% if u.has_valid_email %}
+                                                    <a class="btn btn-primary btn-xs"
+                                                            href="{% url 'cluster_user_send_password_reset' u.email|urlencode %}">
+                                                        {% trans "Reset password" %}
+                                                    </a>
+                                                {% endif %}
+                                                <a class="btn btn-danger btn-xs" href="{% url 'delete_user' u.email|urlencode %}">
+                                                    {% trans "Delete" %}
+                                                </a>
+                                            {% else %}
+                                                &ndash;
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% else %}
+                    <span class="text-muted">{% trans "There are no users yet" %}</span>
+                {% endif %}
+            </div>
+        </div>
+
+    </section>
+{% endblock main %}
+
+{% block scripts %}
+    <script src="{% static 'sxconsole/cluster.js' %}" defer></script>
+{% endblock scripts %}

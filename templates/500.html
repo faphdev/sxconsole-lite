@@ -1,0 +1,14 @@
+{% extends 'public_base.html' %}
+{% load staticfiles %}
+
+{% block public_header %}{% endblock %}
+
+{% block main %}
+    <p class="error-page">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'img/500.png' %}" alt="500"></a>
+        <br>
+        An error occurred while processing this page. <br>
+        Support team has been notified.
+    </p>
+{% endblock %}

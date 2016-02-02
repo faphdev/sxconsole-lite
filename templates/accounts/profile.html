@@ -1,0 +1,43 @@
+{% extends BASE_TEMPLATE %}
+{% load staticfiles %}
+
+{% block main %}
+    <div class="page-header">
+        <h3>
+                <span class="fa fa-user"></span>
+                <span class="js-trunc">
+                    {% blocktrans with email=user.email %}
+                        Hello, {{ user }}!
+                    {% endblocktrans %}
+                </span>
+        </h3>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <a class="btn btn-default" href="{% url 'change_password' %}">
+                {% trans "Change password" %}
+            </a>
+
+            <form class="js-language-select dropdown inline-form" action="{% url 'set_language' %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="language">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                    {% trans "Change language" %}
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    {% get_current_language as current_lang %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for lang in languages %}
+                        <li {% if lang.code == current_lang %}class="active"{% endif %}>
+                            <a data-lang="{{ lang.code }}" href="#">
+                                {{ lang.name_local }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </form>
+        </div>
+    </div>
+{% endblock main %}

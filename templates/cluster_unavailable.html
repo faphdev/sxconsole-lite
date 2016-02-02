@@ -1,0 +1,13 @@
+{% extends 'message_base.html' %}
+
+{% block main %}
+    <div class="alert alert-danger">
+        <h3>{% trans "Cluster unavailable" %}</h3>
+        <p>
+            {% blocktrans %}
+                Failed to connect to SX cluster. Please check your configuration
+                and make sure that at least one node is running.
+            {% endblocktrans %}
+        </p>
+    </div>
+{% endblock main %}

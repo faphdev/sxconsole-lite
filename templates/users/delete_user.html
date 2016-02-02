@@ -1,0 +1,7 @@
+{% extends 'delete.html' %}
+
+{% block warning_message %}
+    {% blocktrans with email=cluster_user.email %}
+        You are about to delete user <strong>{{ email }}</strong>.
+    {% endblocktrans %}
+{% endblock warning_message %}

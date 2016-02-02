@@ -1,0 +1,63 @@
+{% load staticfiles sizefieldtags sxconsole %}
+<section class="side-panel col-sm-4 col-lg-2 js-side-panel">
+    <div class="row">
+        <header class="hidden-xs">
+            <a class="side-panel__heading" href="{% url 'home' %}">
+                <img class="side-panel__logo" src="{% static 'img/logo.png' %}">
+                <h4>
+                    {{ SKIN.short_console_app_name | default:SKIN.console_app_name }}
+                </h4>
+            </a>
+        </header>
+        <section class="side-panel__body">
+
+            <a class="side-panel__button btn btn-lg btn-block" href="{{ ENTERPRISE_URL }}">
+                {% trans "Upgrade now!" %}
+            </a>
+
+            <p class="text-muted">
+            {% trans "With SX Enterprise, you can manage multiple virtual clusters." %}
+            </p>
+
+            {% if current_cluster %}
+                <a class="row side-panel__current-cluster" href="{{ cluster.get_absolute_url }}">
+                    <p class="bold">{% trans "Current cluster:" %}</p>
+
+                    <div class="lead">
+                        {{ current_cluster | icon }}&nbsp;
+                        <span class="js-trunc">{{ current_cluster }}</span>
+                    </div>
+                    {% blocktrans with cluster_usage=current_cluster.get_used_size_display %}
+                        {{ cluster_usage }} used
+                    {% endblocktrans %}
+                </a>
+            {% endif %}
+
+            <p class="bold">
+                {% blocktrans with count=side_panel.clusters_count %}
+                    List of clusters ({{count}})
+                {% endblocktrans %}
+            </p>
+
+            {% if side_panel.clusters %}
+                <ul class="row cluster-list js-cluster-list">
+                    {% for cluster in side_panel.clusters %}
+                    <li>
+                        <a class="cluster-list__cluster
+                                {% if current_cluster %}
+                                    cluster-list__cluster--active
+                                {% endif %}"
+                                href="{{ cluster.get_absolute_url }}">
+
+                            <span class="fa fa-server fa-lg"></span>&nbsp;
+                            <span class="js-trunc">{{ cluster.name }}</span>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                {% trans "There are no clusters yet" %}
+            {% endif %}
+        </section>
+    </div>
+</section>

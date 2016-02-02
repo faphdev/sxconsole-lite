@@ -1,0 +1,15 @@
+-r requirements.txt
+
+virtualenvwrapper==4.7.1
+
+flake8==2.4.1
+ipython==4.0.0
+ipdb==0.8.1
+django-ipware==1.1.2
+
+pytest==2.8.3
+pytest-django==2.9.1
+pytest-mock==0.9.0
+pytest-cov==2.2.0
+mock==1.3.0
+factory_boy==2.6.0

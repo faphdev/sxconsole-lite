@@ -1,0 +1,16 @@
+{% extends 'simple_form.html' %}
+{% load sxconsole %}
+
+{% block page_header %}
+    <div class="page-header">
+        <h3>
+            {% trans "Settings" %}
+            <br>
+            {{ volume | icon }}
+            <a href="{{ volume.cluster.get_absolute_url }}">
+                {{ volume.cluster.name }}</a>
+            <span class="fa fa-caret-right"></span>
+            <span class="js-trunc">{{ volume.name }}</span>
+        </h3>
+    </div>
+{% endblock page_header %}

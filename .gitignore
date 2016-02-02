@@ -1,0 +1,14 @@
+*.pyc
+*.egg-info
+.log/
+
+.coverage
+.cache/
+
+/db.sqlite3
+/node_modules/
+/assets/build/
+/assets/i18n/**/*.json
+/static/
+
+/conf.yaml

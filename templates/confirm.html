@@ -1,0 +1,31 @@
+{% extends BASE_TEMPLATE %}
+
+{% block main %}
+    <form class="form-horizontal panel panel-default" action="{{ request.get_full_path }}" method="POST">
+        {% csrf_token %}
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                {% trans "Confirmation needed" %}
+            </h4>
+        </div>
+        <div class="panel-body">
+            <p>
+                {% block confirmation_message %}
+                    {{ confirmation_message }}
+                {% endblock %}
+            </p>
+
+            {% block extra_section %}
+            {% endblock %}
+
+            <div>
+                <button class="btn btn-default" type="button" onClick="history.back()">
+                    {% trans "Go back" %}
+                </button>
+                <button class="btn btn-primary" type="submit">
+                    {% trans "Correct" context "brief reply to a question" %}
+                </button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

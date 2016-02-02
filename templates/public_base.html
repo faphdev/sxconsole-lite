@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block main_wrapper_class %}col-md-10 col-lg-6{% endblock %}
+
+{% block body %}
+<section class="row">
+    <div class="col-lg-offset-3 col-lg-6">
+        {% block public_header %}
+            <h1 class="row">
+                <div class="col col-sm-9">
+                    {% block page_title %}
+                        {{ SKIN.console_app_name }}
+                    {% endblock page_title %}
+                </div>
+                <div class="col-sm-3 text-right">
+                    <form class="js-language-select dropdown inline-form" action="{% url 'set_language' %}" method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="language">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                            {% trans "Change language" %}
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            {% get_current_language as current_lang %}
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for lang in languages %}
+                                <li {% if lang.code == current_lang %}class="active"{% endif %}>
+                                    <a data-lang="{{ lang.code }}" href="#">
+                                        {{ lang.name_local }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </form>
+                </div>
+            </h1>
+        {% endblock public_header %}
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                {% include 'messages.html' %}
+                {% block main %}{% endblock %}
+            </div>
+        </div>
+        {% include 'includes/demo_footer.html' %}
+    </div>
+</section>
+{% endblock %}

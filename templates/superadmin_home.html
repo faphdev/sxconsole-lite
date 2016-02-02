@@ -1,0 +1,173 @@
+{% extends BASE_TEMPLATE %}
+{% load sizefieldtags staticfiles %}
+
+{% block main %}
+    <div class="page-header">
+        <h3>
+            <span class="fa fa-area-chart"></span>
+            <span class="js-trunc">{% trans "Dashboard" %}</span>
+        </h3>
+    </div>
+
+    <div class="well">
+        <h4>
+            {% trans "Cluster info" %}
+            <small>
+                ({% trans "host" context "cluster url" %}:
+                {{ cluster.address }}
+                {% trans "port" context "cluster port" %}:
+                {{ cluster.port }})
+            </small>
+        </h4>
+        <div class="row">
+            <div class="col-xs-4 text-center">
+                <p>
+                    <span class="fa fa-pie-chart fa-2x text-primary"></span>
+                    <br>
+                    {% trans "Cluster size (virtual)" %}
+                    <br>
+                    {{ cluster.virtual_size | filesize }}
+                <p>
+                </p>
+                    {% trans "Cluster size (physical)" %}
+                    <br>
+                    {% if nodes_down %}
+                        <span class="text-muted">{% trans "unavailable" %}</span>
+                    {% else %}
+                        {{ cluster.physical_size | filesize }}
+                    {% endif %}
+                </p>
+            </div>
+            <div class="col-xs-4 text-center">
+                <p>
+                    <span class="fa fa-server fa-2x text-primary"></span>
+                    <br>
+                    {% trans "Virtual clusters" %}
+                    <br>
+                    {{ vcluster_info.count }}
+                </p>
+                <p>
+                    {% trans "Allocated size" %}
+                    <br>
+                    {{ vcluster_info.allocated_size | filesize }}
+                </p>
+            </div>
+            <div class="col-xs-4 text-center">
+                <p>
+                    <span class="fa fa-hdd-o fa-2x text-primary"></span>
+                    <br>
+                    {% trans "Usage (pre-replica)" %}
+                    <br>
+                    {{ disk_usage.pre_replica | filesize }}
+                </p>
+                <p>
+                    {% trans "Usage (post-replica)" %}
+                    <br>
+                    {% if nodes_down %}
+                        <span class="text-muted">{% trans "unavailable" %}</span>
+                    {% else %}
+                        {{ cluster.physical_size | filesize }}
+                    {% endif %}
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        {% for zone in zones %}
+            <div class="panel panel-default panel-body">
+                <h4>
+                    {% blocktrans with num=forloop.counter %}
+                        Zone {{ num }}
+                    {% endblocktrans %}
+                </h4>
+                {% for node in zone %}
+                    <div class="node-info well">
+                        {% if node.down %}
+                            <h4 class="node-info__heading text-danger">
+                                <span class="fa fa-bomb"></span>
+                                {% blocktrans with ip=node.public_ip %}
+                                    Node {{ ip }}
+                                {% endblocktrans %}
+                                {% if node.private_ip %}
+                                    {% blocktrans with ip=node.private_ip %}
+                                        <small>(inter-node: {{ ip }})</small>
+                                    {% endblocktrans %}
+                                {% endif %}
+                            </h4>
+                            <div class="node-info__body">
+                                <p class="bold text-danger">
+                                    {% trans "This node is down!" %}
+                                </p>
+                            </div>
+                        {% else %}
+                            <h4 class="node-info__heading">
+                                <a class="text-normal" href="#{{ node.uuid }}" data-toggle="collapse">
+                                    <span class="fa fa-database"></span>
+                                    {% blocktrans with ip=node.public_ip %}
+                                        Node {{ ip }}
+                                    {% endblocktrans %}
+                                    {% if node.private_ip %}
+                                        {% blocktrans with ip=node.private_ip %}
+                                            <small>(inter-node: {{ ip }})</small>
+                                        {% endblocktrans %}
+                                    {% endif %}
+                                </a>
+                            </h4>
+
+                            <div id="{{ node.uuid }}" class="node-info__body collapse {% if nodes_count < 4 %}in{% endif %}">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <p>
+                                            <span class="bold"> {% trans "System" %}: </span>
+                                            {{ node.system }}
+                                            <br>
+                                            <span class="bold"> {% trans "Local time" %}: </span>
+                                            {{ node.local_time }}
+                                        </p>
+
+                                        <p>
+                                            <span class="bold"> {% trans "CPU Cores" %}: </span>
+                                            {{ node.cores }}
+                                            <br>
+                                            <span class="bold"> {% trans "RAM" %}: </span>
+                                            {{ node.memory | filesize }}
+                                            <br>
+                                            <span class="bold"> {% trans "Disk usage" %}: </span>
+                                            {{ node.used_space | filesize }}
+                                            {% blocktrans with free_space=node.free_space|filesize %}
+                                                ({{ free_space }} free)
+                                            {% endblocktrans %}
+                                            <br>
+                                            <span class="bold"> {% trans "Virtual size" %}: </span>
+                                            {{ node.capacity | filesize }}
+                                        </p>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <p>
+                                            <span class="bold"> {% trans "SX version" %}: </span>
+                                            {{ node.sx_version }}
+                                            <br>
+                                            <span class="bold"> {% trans "SX-Storage version" %}: </span>
+                                            {{ node.hashfs_version }}
+                                        </p>
+
+                                        <p>
+                                            <span class="bold"> {% trans "Node UUID" %}: </span>
+                                            <br> <code>{{ node.uuid }}</code>
+                                            <br>
+                                            <span class="bold"> {% trans "SX-Storage path" %}: </span>
+                                            <br> <code>{{ node.storage_path }}</code>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </section>
+{% endblock main %}

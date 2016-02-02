@@ -1,0 +1,23 @@
+{% extends 'drive_base.html' %}
+
+{% block page_title %}
+    {{ SKIN.app_name }}
+{% endblock page_title %}
+
+{% block page_header %}
+    <div class="page-header">
+        <h3>
+            <span class="fa fa-pencil"></span>
+            <span class="js-trunc">{{ view.title }}</span>
+        </h3>
+    </div>
+{% endblock page_header %}
+
+{% block main %}
+    {% if view.help_text %}
+        <div class="alert alert-info">
+            {{ view.help_text }}
+        </div>
+    {% endif %}
+    {% include 'includes/form.html' %}
+{% endblock %}

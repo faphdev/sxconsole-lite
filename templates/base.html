@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% get_current_language as lang %}
+<html lang="{{ lang }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="{{ SKIN.console_app_name }} @{{ VERSION }}">
+
+        <title>
+            {% block title %}
+                {% if view.title %} {{ view.title }} - {% endif %}
+                {{ SKIN.console_app_name }}
+            {% endblock title %}
+        </title>
+
+        <link rel="icon" type="image/png" href="{% static 'img/favicon/16.png' %}" sizes="16x16">
+        <link rel="icon" type="image/png" href="{% static 'img/favicon/32.png' %}" sizes="32x32">
+        <link rel="icon" type="image/png" href="{% static 'img/favicon/48.png' %}" sizes="48x48">
+        <link rel="icon" type="image/png" href="{% static 'img/favicon/64.png' %}" sizes="64x64">
+        <link rel="icon" type="image/png" href="{% static 'img/favicon/128.png' %}" sizes="128x128">
+        <link rel="icon" type="image/png" href="{% static 'img/favicon/256.png' %}" sizes="256x256">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700&subset=latin,latin-ext">
+        <link rel="stylesheet" href="{% static 'sxconsole/styles.css' %}">
+
+        <script src="{% static 'sxconsole/vendor.js' %}" defer></script>
+        <script src="{% static 'sxconsole/i18n.js' %}" defer></script>
+        <script src="{% static 'sxconsole/common.js' %}" defer></script>
+        {% block scripts %}{% endblock %}
+    </head>
+    <body>
+        {% block body %}
+            <div class="col-sm-offset-4 col-sm-8 col-lg-offset-2 col-lg-10">
+                {% include 'header.html' %}
+                <div class="main-wrapper {% block main_wrapper_class %}col-md-12 col-lg-8{% endblock %}">
+                    <div class="row">
+                        {% include 'messages.html' %}
+                        <main>
+                            {% block page_header %}{% endblock %}
+                            {% block main %}{% endblock %}
+                            {% include 'includes/demo_footer.html' %}
+                        </main>
+                    </div>
+                </div>
+            </div>
+            {% include 'side_panel.html' %}
+        {% endblock body %}
+    </body>
+</html>

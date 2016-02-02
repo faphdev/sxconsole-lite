@@ -1,0 +1,15 @@
+{% extends BASE_TEMPLATE %}
+{% load staticfiles %}
+
+{% block public_header %}{% endblock %}
+
+{% block main %}
+    <p class="error-page">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'img/404.png' %}" alt="404"></a>
+        <br>
+        {% blocktrans %}
+        We are sorry, but the page you tried to access is not available.
+        {% endblocktrans %}
+    </p>
+{% endblock %}

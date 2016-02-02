@@ -1,0 +1,74 @@
+# Comment out the following line before use
+Edit-me-first
+# (optional) current skin.
+# skin:
+server:
+    # Server configuration
+    # sxconsole hostname or a list of hostnames, e.g.
+    #     console.example.com
+    # or
+    #     - console.example.com
+    #     - 127.0.0.1
+    hosts:
+    # (optional) path to sqlite3 databse
+    # db: /data/sql/db.sqlite3
+    # (optional): enable demo mode
+    # demo: true
+app:
+# app settings
+    # (optional) set a default language. default is 'en'
+    # default_lang:
+    # (optional) By default, SX console will auto-detect your users language.
+    # To enforce `default_lang`, enable this setting.
+    # force_default_lang: true
+    # (optional) enforce a minimal replica count
+    # min_replicas: 2
+    # (optional) e-mail, or a list of e-mails, to which server error
+    # tracebacks will be sent.
+    # report_to: admin-logs@skylable.com
+mailing:
+# smtp settings
+    # The host to use for sending email
+    host:
+    # (optional) The port to use for the SMTP server
+    # port:
+    # (optional) Username for the SMTP server
+    # user:
+    # (optional) Password for the SMTP server
+    # password:
+    # (optional) Whether to use SSL connection
+    # ssl:
+    # (optional) Whether to use TLS connection
+    # tls:
+    # The e-mail address which will be used as the sender
+    from:
+sx:
+# Cluster connection parameters
+    # SX Cluster name. will be used as host if ip_address is omitted
+    cluster:
+    # (optional) ip address (or a list of ip addresses) of the cluster
+    # ip_addresses:
+    # (optional) toggle ssl. default is true
+    # is_secure:
+    # (optional) specifies a custom connection port
+    # port:
+
+    # SX admin user authentication - either is required:
+    # base64-encoded user key
+    admin_key:
+    # path to a file with encoded user key
+    # admin_key_path:
+
+    # Extra configuration parameters
+    # (optional) toggle ssl certificate validation. default is true
+    # verify_ca:
+    # (optional) path to a custom certificate. implies verify_ca
+    # certificate:
+carbon:
+# Carbon server connection parameters
+    # Carbon server address, should generally be 'localhost'
+    carbon_host: CARBON_ADDR
+    # connection port for Carbon pickle protocol. 2004 is Carbon default
+    port: 2004
+    # Path to a directory with whisper databases, e.g.
+    whisper_dir: /var/lib/graphite/storage/whisper/

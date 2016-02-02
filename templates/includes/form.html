@@ -1,0 +1,33 @@
+<form class="form-horizontal" action="{{ request.get_full_path }}" method="POST">
+    {% if form.non_field_errors %}
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-8">
+                {% for e in form.non_field_errors %}
+                    <div class="alert alert-danger">{{ e }}</div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+
+    {% csrf_token %}
+    {% for field in form %}
+        {% include 'includes/form_field.html' %}
+    {% endfor %}
+
+    {% if buttons_tpl %}
+        {% include buttons_tpl %}
+    {% else %}
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-8">
+                {% if not hide_go_back %}
+                    <button class="btn btn-default" type="button" onClick="history.back()">
+                        {% trans "Go back" %}
+                    </button>
+                {% endif %}
+                <button class="btn btn-primary" type="submit">
+                    {{ button_text | default:_("Submit") }}
+                </button>
+            </div>
+        </div>
+    {% endif %}
+</form>

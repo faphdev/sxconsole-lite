@@ -1,0 +1,6 @@
+{% extends 'public_base.html' %}
+
+{% block title %}
+    {% if view.title %} {{ view.title }} - {% endif %}
+    {{ SKIN.app_name }}
+{% endblock title %}

@@ -1,0 +1,26 @@
+{% extends 'delete.html' %}
+
+{% block warning_message %}
+    {% blocktrans with volume=volume.name cluster=cluster.name %}
+        You are about to delete volume <strong>{{ volume }}</strong> in cluster
+        <strong>{{ cluster }}</strong>.
+    {% endblocktrans %}
+{% endblock warning_message %}
+
+{% block extra_section %}
+    {% if not volume.empty %}
+        <p class="text-danger">
+            {% blocktrans %}
+                <strong>This volume is not empty!</strong>
+                If you know what you are doing, enter its name below.
+            {% endblocktrans %}
+        </p>
+        <div class="row">
+            <div class="col-sm-6 col-md-5 col-lg-4">
+                <p class="form-inlie text-danger">
+                    {% include 'includes/form_field.html' with field=form.name %}
+                </p>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

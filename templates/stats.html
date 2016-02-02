@@ -1,0 +1,52 @@
+{% extends BASE_TEMPLATE %}
+{% load sizefieldtags staticfiles %}
+
+{% block main %}
+    <div class="page-header">
+        <h3>
+            <span class="fa fa-area-chart"></span>
+            <span class="js-trunc">{% trans "Statistics" %}</span>
+        </h3>
+    </div>
+
+    <section>
+        <div id="stats-controls" class="well">
+            {% trans "Select interval" %}:
+            &nbsp;
+            <div class="btn-group js-intervals">
+                <button class="btn btn-default" type="button" data-delta="3">{% trans "3h" %}</button>
+                <button class="btn btn-default" type="button" data-delta="24">{% trans "24h" %}</button>
+                <button class="btn btn-default" type="button" data-delta="24 7">{% trans "1w" %}</button>
+                <button class="btn btn-default" type="button" data-delta="24 30">{% trans "1m" %}</button>
+            </div>
+
+            &nbsp;|&nbsp;
+
+            <button class="btn btn-default js-refresh">
+                <span class="fa fa-fw fa-refresh" title="{% trans "Refresh" %}"></span>
+            </button>
+            <button class="btn btn-default js-auto-refresh">
+                {% trans "Live graphs" %}
+            </button>
+        </div>
+        <div>
+            <div id="stats" data-url="{% url 'get_stats' %}" data-init-url="{% url 'initial_stats' %}">
+                <span class="text-muted">{% trans "Loading statistics..." %}</span>
+            </div>
+            <div class="lite-graphs">
+                <h3>{% trans "SX Enterprise only" %}</h3>
+                <p class="lead">
+                    {% trans "Upgrade to SX Enterprise to enable more graphs." %}
+                    <a href="{{ ENTERPRISE_URL }}" class="btn btn-success">
+                        {% trans "Upgrade now!" %}
+                    </a>
+                </p>
+                <img src="{% static 'img/stats.png' %}">
+            </div>
+        </div>
+    </section>
+{% endblock main %}
+
+{% block scripts %}
+    <script src="{% static 'sxconsole/stats.js' %}" defer></script>
+{% endblock scripts %}

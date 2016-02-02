@@ -1,0 +1,54 @@
+{% extends BASE_TEMPLATE %}
+
+{% block main %}
+    <div class="page-header">
+        <h3 class="row">
+            <div class="col-sm-8">
+                <span class="fa fa-list"></span>
+                <span class="js-trunc">{% trans "Administrators" %}</span>
+            </div>
+            <div class="col-sm-4 text-right">
+                <a class="btn btn-default" href="{% url 'invite' %}">
+                    {% trans "Invite an admin" %}
+                </a>
+            </div>
+        </h3>
+    </div>
+
+    <section>
+        <div class="table-responsive">
+            <table class="table-common table-bordered">
+                <thead>
+                    <tr>
+                        <th>{% trans "E-mail" %}</th>
+                        <th>{% trans "Level" %}</th>
+                        <th>{% trans "Actions" %}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for admin in admins reversed %}
+                    <tr>
+                        <td>
+                            <span class="js-trunc">{{ admin }}</span>
+                        </td>
+                        <td> {{ admin.level.desc }} </td>
+                        <td>
+                            {% if user != admin and not admin.is_root_admin %}
+                                {% if user.is_root_admin %}
+                                    <a class="btn btn-danger btn-xs" href="{% url 'admin_delete' admin.pk %}">
+                                        {% trans "Delete" %}
+                                    </a>
+                                {% else %}
+                                    &ndash;
+                                {% endif %}
+                            {% else %}
+                                &ndash;
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+          </div>
+    </section>
+{% endblock main %}

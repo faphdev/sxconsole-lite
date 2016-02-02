@@ -1,0 +1,38 @@
+{% extends BASE_TEMPLATE %}
+{% load sizefieldtags staticfiles sxconsole %}
+
+{% block main %}
+    <div class="page-header">
+        <h3 class="row">
+            <div class="col-sm-10">
+                {{ volume | icon }}
+                <a href="{{ volume.cluster.get_absolute_url }}">
+                    {{ volume.cluster.name }}</a>
+                <span class="fa fa-caret-right"></span>
+                <span class="js-trunc">{{ volume.name }}</span>
+            </div>
+            <div class="col-sm-2 text-right">
+                <button class="btn btn-default" type="button" onClick="history.back()">
+                    {% trans "Go back" %}
+                </button>
+            </div>
+        </h3>
+    </div>
+
+    <section>
+        <h3>
+            {% trans "Users" %}
+            <a class="btn btn-default" href="{{ add_user_url }}">
+                <span class="fa fa-user-plus"></span>
+                {% trans "New user" %}
+            </a>
+        </h3>
+        <div id="volume-users" data-init="{{ users_json }}">
+            <span class="text-muted">{% trans "Loading..." %}</span>
+        </div>
+    </section>
+{% endblock main %}
+
+{% block scripts %}
+    <script src="{% static 'sxconsole/volumeAcl.js' %}" defer></script>
+{% endblock scripts %}

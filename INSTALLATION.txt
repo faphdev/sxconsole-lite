@@ -1,0 +1,32 @@
+Required stuff
+    Python: python2.7, pip
+    Assets: node, npm
+
+Setup the environment
+    $ npm install npm -g  # Update npm
+    $ npm install webpack -g
+
+Install the dependencies
+    $ pip install -r requirements.txt
+    $ npm install
+
+Generate translation files
+    $ ./manage.py compilemessages
+    $ ./i18n-manager.js process
+
+Configure connection to the sx cluster
+    $ mv conf_example.yaml conf.yaml
+    $ $EDITOR conf.yaml
+
+Build & optimize the assets
+    $ webpack -p
+
+Setting up django production server:
+    https://docs.djangoproject.com/en/1.8/howto/deployment/wsgi/
+
+Also, add cron jobs for:
+    ./manage.py delete_expired_tokens
+    ./manage.py collect_stats
+
+If you're running a DEMO server, run this:
+    ./manage.py create_demo_user
