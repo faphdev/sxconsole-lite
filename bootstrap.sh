@@ -4,8 +4,8 @@ if [[ $VIRTUAL_ENV != "" ]]; then
 fi
 
 source $(which virtualenvwrapper.sh)
-rmvirtualenv sxconsole
-mkvirtualenv sxconsole
+rmvirtualenv sxconsole-lite
+mkvirtualenv sxconsole-lite
 
 set -e
 
