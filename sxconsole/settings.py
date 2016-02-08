@@ -102,8 +102,6 @@ INSTALLED_APPS = (
 
     'django_extensions',
     'sizefield',
-    'rest_framework',
-    'rest_framework_swagger',
 
     'sxconsole',
     'clusters',
@@ -302,25 +300,3 @@ for name in LOGGING['handlers']:
         continue
     handler = LOGGING['handlers'][name]
     handler['filename'] = os.path.join(_log_path, handler['filename'])
-
-
-# API conf
-
-REST_FRAMEWORK = {
-    'DEFAULT_VERSIONING_CLASS':
-    'rest_framework.versioning.NamespaceVersioning',
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
-    ),
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
-    ),
-    'DEFAULT_RENDERER_CLASSES': (
-        'rest_framework.renderers.JSONRenderer',
-    ),
-}
-
-if DEBUG:
-    REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'] += \
-        ('rest_framework.renderers.BrowsableAPIRenderer',)
