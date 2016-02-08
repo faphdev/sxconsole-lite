@@ -6,20 +6,17 @@ let language = document.documentElement.getAttribute('lang');
 
 moment.locale(language);
 
-// Remove falsy entries from translations[lang].translation dictionaries
-translations = _.mapValues(translations, function (lang) {
-    lang.translation = _.pickBy(lang.translation)
-    return lang;
-});
-
 i18n.init({
     load: 'currentOnly',
     resources: translations,
     lng: language,
-    // These values can be literally anything, as long as it won't appear in
-    // our messages...
-    keySeparator: '\t.\t',
-    nsSeparator: '\t:\t',
+    // No namespaces and keys
+    nsSeparator: false,
+    keySeparator: false,
+    // We expect only non-empty strings:
+    returnNull: false,
+    returnEmptyString: false,
+    returnObjects: false,
 });
 
 module.exports = i18n.t.bind(i18n);
