@@ -6,3 +6,4 @@ django-annoying==0.8.4
 sxclient==0.14.0
 PyYAML==3.11
 whisper==0.9.14
+python-dateutil==2.4.2
