@@ -2,7 +2,7 @@
 
 # start SXConsole
 RUN_AS=sxconsole
-SUGGEST_CMD="docker run -v /path/to/datadir:/data --name=sxconsole-lite --link sxconsole-lite-graphite:sxconsole-lite-graphite --restart=always -d sxconsole-lite"
+SUGGEST_CMD="docker run -v /path/to/datadir:/data --name=sxconsole-lite --link sxconsole-graphite:sxconsole-graphite --restart=always -d sxconsole-lite"
 
 for i in sxconsole-lite.key sxconsole-lite.crt; do
     if ! [ -r /data/$i ]; then
@@ -38,7 +38,7 @@ if [ -z "$SXCONSOLE_GRAPHITE_PORT_2004_TCP_ADDR" ]; then
     export $(env|grep PORT_2004_TCP_ADDR=|head -n 1|sed -e 's/^.*PORT_2004_TCP_ADDR/SXCONSOLE_GRAPHITE_PORT_2004_TCP_ADDR/')
 fi
 if [ -z "$SXCONSOLE_GRAPHITE_PORT_2004_TCP_ADDR" ]; then
-    echo You must link this container to sxconsole-lite-graphite
+    echo You must link this container to sxconsole-graphite
     echo Use: $SUGGEST_CMD
     exit 1
 fi

@@ -1,8 +1,8 @@
 #!/bin/bash -x
 
-echo "Building images..."
-docker build -t sxconsole-lite . || exit 1
-docker build -t sxconsole-lite-graphite ../docker-sxconsole-graphite || exit 1
+echo "Downloading images..."
+docker pull skylable/sxconsole-lite || exit 1
+docker pull skylable/sxconsole-graphite || exit 1
 
 mkdir -p /data/sxconsole-lite/
 # Generate conf if sxconsole-lite is ran for the first time
@@ -26,17 +26,15 @@ fi
 echo "Starting containers..."
 set -e
 docker run -d \
-    -v /data/sxconsole-lite-graphite:/var/lib/graphite/storage/whisper \
-        --name sxconsole-lite-graphite \
-    sxconsole-lite-graphite
+    -v /data/sxconsole-graphite:/var/lib/graphite/storage/whisper \
+    skylable/sxconsole-graphite
 
 docker run -d \
     -v /data/sxconsole-lite:/data \
-    -v /data/sxconsole-lite-graphite:/var/lib/graphite/storage/whisper \
+    -v /data/sxconsole-graphite:/var/lib/graphite/storage/whisper \
     -v /data/sxconsole-lite/logs:/srv/logs \
     -p :8888:443 \
-    --name=sxconsole-lite \
-    --link sxconsole-lite-graphite:sxconsole-lite-graphite \
-    sxconsole-lite
+    --link sxconsole-graphite:sxconsole-graphite \
+    skylable/sxconsole-lite
 
 docker ps
