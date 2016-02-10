@@ -1,0 +1,90 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid ""
+"If one node of the cluster dies, the data stored in this volume will become "
+"unavailable. Recommended value: 2 or greater."
+msgstr ""
+
+msgid "Loading volumes..."
+msgstr ""
+
+msgid "Failed to load volumes."
+msgstr ""
+
+msgid "Retry"
+msgstr ""
+
+msgid "There are no volumes yet"
+msgstr ""
+
+msgid "Index"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Usage"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid "Replicas"
+msgstr ""
+
+msgid "Revs"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "This volume is encrypted"
+msgstr ""
+
+msgid "Manage ACL"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Used space"
+msgstr ""
+
+msgid "Disk free"
+msgstr ""
+
+msgid "Disk usage"
+msgstr ""
+
+msgid "There are no users yet"
+msgstr ""
+
+msgid "Username"
+msgstr ""
+
+msgid "Permissions"
+msgstr ""
+
+msgid "Read"
+msgstr ""
+
+msgid "Write"
+msgstr ""
+
+msgid "Manager"
+msgstr ""
+
+msgid "The user can read files on the volume"
+msgstr ""
+
+msgid "The user can modify files on the volume"
+msgstr ""
+
+msgid "The user can manage permissions of other users on this volume"
+msgstr ""

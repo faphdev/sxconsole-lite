@@ -1,0 +1,811 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-10 15:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: accounts/forms.py:19
+msgid ""
+"Please enter a correct email and password. Note that both fields may be case-"
+"sensitive."
+msgstr ""
+
+#: accounts/forms.py:22
+msgid "Remember me"
+msgstr ""
+
+#: accounts/forms.py:48
+msgid "There is no user with this e-mail address."
+msgstr ""
+
+#: accounts/forms.py:65 templates/clusters/cluster.html:11
+#: templates/clusters/cluster.html.py:72
+msgid "SX Enterprise only"
+msgstr ""
+
+#: accounts/forms.py:72
+msgid "Current password"
+msgstr ""
+
+#: accounts/forms.py:81
+msgid "New password"
+msgstr ""
+
+#: accounts/forms.py:86
+msgid "Please enter your password."
+msgstr ""
+
+#: accounts/models.py:25
+msgid "Admin"
+msgstr ""
+
+#: accounts/models.py:26
+msgid "Root Admin"
+msgstr ""
+
+#: accounts/models.py:34 utils/forms.py:32
+msgid "Email"
+msgstr ""
+
+#: accounts/models.py:35 templates/accounts/admin_list.html:24
+msgid "Level"
+msgstr ""
+
+#: accounts/models.py:61 users/models.py:40
+msgid "{app_name} password reset"
+msgstr ""
+
+#: accounts/models.py:74 users/models.py:50
+msgid "Welcome to {app_name}!"
+msgstr ""
+
+#: accounts/views.py:29 templates/accounts/login_buttons.html:4
+msgid "Login"
+msgstr ""
+
+#: accounts/views.py:50 templates/header.html:24
+msgid "Profile"
+msgstr ""
+
+#: accounts/views.py:57 templates/accounts/profile.html:18
+msgid "Change password"
+msgstr ""
+
+#: accounts/views.py:92 users/views.py:142
+msgid "Welcome"
+msgstr ""
+
+#: accounts/views.py:97 users/views.py:147
+msgid ""
+"Welcome to {app_name}! First, you have to set a password for your account."
+msgstr ""
+
+#: accounts/views.py:104 users/views.py:154
+msgid "Password reset"
+msgstr ""
+
+#: accounts/views.py:105 users/views.py:155
+msgid "Enter a new password."
+msgstr ""
+
+#: accounts/views.py:114
+msgid "Forgot your password?"
+msgstr ""
+
+#: accounts/views.py:115
+msgid ""
+"Enter your e-mail address. We'll send you a link to recover your account."
+msgstr ""
+
+#: accounts/views.py:123
+msgid ""
+"We have sent you an e-mail with instructions on resetting your password."
+msgstr ""
+
+#: accounts/views.py:143 templates/accounts/admin_list.html:8
+#: templates/clusters/cluster.html:72
+msgid "Administrators"
+msgstr ""
+
+#: accounts/views.py:152
+msgid "Invite"
+msgstr ""
+
+#: accounts/views.py:159 users/views.py:70
+msgid "Invitation has been sent to {}"
+msgstr ""
+
+#: accounts/views.py:174
+msgid "Deleting {email}"
+msgstr ""
+
+#: clusters/models.py:30
+msgid "Your cluster"
+msgstr ""
+
+#: clusters/models.py:48 clusters/models.py:59
+msgid "{usage} of {size} ({percentage}%)"
+msgstr ""
+
+#: sxconsole/core.py:60
+msgid ""
+"Name should consist of at least two characters and include only alphanumeric "
+"characters, hyphen and underscore."
+msgstr ""
+
+#: sxconsole/core.py:71
+msgid "Size must be either 0 or at least 1MB."
+msgstr ""
+
+#: sxconsole/core.py:78
+msgid "Replicas must be between {min} and {max}."
+msgstr ""
+
+#: sxconsole/core.py:97
+msgid "Revisions must be between {min} and {max}."
+msgstr ""
+
+#: sxconsole/core.py:145
+msgid "Connection to the cluster failed."
+msgstr ""
+
+#: sxconsole/core.py:150
+msgid "Volume size should be between {min} and {max}."
+msgstr ""
+
+#: sxconsole/core.py:156
+msgid ""
+"An error occurred while processing your request. Please try again later."
+msgstr ""
+
+#: sxconsole/msgs.py:8
+msgid "An error occurred while sending e-mail. Please try again later."
+msgstr ""
+
+#: sxconsole/settings.py:207
+msgid "English"
+msgstr ""
+
+#: sxconsole/settings.py:208
+msgid "German"
+msgstr ""
+
+#: sxconsole/settings.py:209
+msgid "Italian"
+msgstr ""
+
+#: sxconsole/settings.py:210
+msgid "Polish"
+msgstr ""
+
+#: sxconsole/views.py:26 templates/header.html:13
+#: templates/superadmin_home.html:8
+msgid "Dashboard"
+msgstr ""
+
+#: sxconsole/views.py:128 templates/stats.html:8
+msgid "Statistics"
+msgstr ""
+
+#: templates/404.html:11
+msgid ""
+"\n"
+"        We are sorry, but the page you tried to access is not available.\n"
+"        "
+msgstr ""
+
+#: templates/accounts/admin_list.html:12
+msgid "Invite an admin"
+msgstr ""
+
+#: templates/accounts/admin_list.html:23
+msgid "E-mail"
+msgstr ""
+
+#: templates/accounts/admin_list.html:25 templates/clusters/cluster.html:91
+#: templates/clusters/cluster.html:148
+msgid "Actions"
+msgstr ""
+
+#: templates/accounts/admin_list.html:39 templates/clusters/cluster.html:16
+#: templates/clusters/cluster.html:122 templates/clusters/cluster.html:166
+#: templates/delete.html:29
+msgid "Delete"
+msgstr ""
+
+#: templates/accounts/login_buttons.html:7
+msgid "Forgot password?"
+msgstr ""
+
+#: templates/accounts/profile.html:9
+#, python-format
+msgid ""
+"\n"
+"                        Hello, %(user)s!\n"
+"                    "
+msgstr ""
+
+#: templates/accounts/profile.html:25 templates/public_base.html:19
+msgid "Change language"
+msgstr ""
+
+#: templates/cluster_unavailable.html:5
+msgid "Cluster unavailable"
+msgstr ""
+
+#: templates/cluster_unavailable.html:7
+msgid ""
+"\n"
+"                Failed to connect to SX cluster. Please check your "
+"configuration\n"
+"                and make sure that at least one node is running.\n"
+"            "
+msgstr ""
+
+#: templates/clusters/cluster.html:13 templates/clusters/cluster.html:118
+#: templates/volumes/edit_volume.html:7
+msgid "Settings"
+msgstr ""
+
+#: templates/clusters/cluster.html:24
+msgid "Unlimited"
+msgstr ""
+
+#: templates/clusters/cluster.html:29 templates/clusters/cluster.html.py:70
+msgid "Volumes"
+msgstr ""
+
+#: templates/clusters/cluster.html:31
+#, python-format
+msgid ""
+"\n"
+"                        %(volumes)s of %(limit)s\n"
+"                    "
+msgstr ""
+
+#: templates/clusters/cluster.html:40 templates/clusters/cluster.html.py:71
+#: templates/volumes/volume_acl.html:24
+msgid "Users"
+msgstr ""
+
+#: templates/clusters/cluster.html:42
+#, python-format
+msgid ""
+"\n"
+"                        %(users)s of %(limit)s\n"
+"                    "
+msgstr ""
+
+#: templates/clusters/cluster.html:51 templates/superadmin_home.html:50
+msgid "Allocated size"
+msgstr ""
+
+#: templates/clusters/cluster.html:60 templates/clusters/cluster.html.py:87
+msgid "Usage"
+msgstr ""
+
+#: templates/clusters/cluster.html:79
+msgid "Add a volume"
+msgstr ""
+
+#: templates/clusters/cluster.html:86 volumes/forms.py:41 volumes/forms.py:71
+msgid "Name"
+msgstr ""
+
+#: templates/clusters/cluster.html:88 volumes/forms.py:19
+msgid "Size"
+msgstr ""
+
+#: templates/clusters/cluster.html:89 volumes/forms.py:43
+msgid "Replicas"
+msgstr ""
+
+#: templates/clusters/cluster.html:90
+msgid "Revs"
+msgstr ""
+
+#: templates/clusters/cluster.html:101
+msgid "This volume is encrypted"
+msgstr ""
+
+#: templates/clusters/cluster.html:114
+msgid "Manage ACL"
+msgstr ""
+
+#: templates/clusters/cluster.html:132
+msgid "There are no volumes yet"
+msgstr ""
+
+#: templates/clusters/cluster.html:139
+msgid "Add a user"
+msgstr ""
+
+#: templates/clusters/cluster.html:147
+msgid "Username"
+msgstr ""
+
+#: templates/clusters/cluster.html:162
+msgid "Reset password"
+msgstr ""
+
+#: templates/clusters/cluster.html:178
+msgid "There are no users yet"
+msgstr ""
+
+#: templates/confirm.html:8
+msgid "Confirmation needed"
+msgstr ""
+
+#: templates/confirm.html:23 templates/delete.html:26
+#: templates/includes/form.html:24 templates/users/user_form.html:33
+#: templates/volumes/volume_acl.html:16
+msgid "Go back"
+msgstr ""
+
+#: templates/confirm.html:26
+msgctxt "brief reply to a question"
+msgid "Correct"
+msgstr ""
+
+#: templates/delete.html:8
+msgid "Heads up!"
+msgstr ""
+
+#: templates/delete.html:14
+#, python-format
+msgid ""
+"\n"
+"                        You are about to delete <strong>%(object)s</"
+"strong>.\n"
+"                    "
+msgstr ""
+
+#: templates/delete.html:18
+msgid "Do you wish to continue?"
+msgstr ""
+
+#: templates/header.html:17
+msgid "Stats"
+msgstr ""
+
+#: templates/header.html:20
+msgid "Admins"
+msgstr ""
+
+#: templates/header.html:34
+msgid "Logout"
+msgstr ""
+
+#: templates/includes/demo_footer.html:4
+msgid ""
+"\n"
+"            This is a demo. Many functionalities are partially or "
+"completely\n"
+"            disabled to prevent abuse.\n"
+"        "
+msgstr ""
+
+#: templates/includes/form.html:28 templates/users/user_form.html:36
+msgid "Submit"
+msgstr ""
+
+#: templates/mail/invite.html:1
+#, python-format
+msgid ""
+"\n"
+"You have been invited to %(app_name)s.\n"
+"\n"
+"Click the link below to join:\n"
+"%(link)s\n"
+msgstr ""
+
+#: templates/mail/password_reset.html:1
+#, python-format
+msgid ""
+"\n"
+"You have requested a password reset for your %(app_name)s account.\n"
+"\n"
+"Click the link below to recover your account:\n"
+"%(link)s\n"
+msgstr ""
+
+#: templates/side_panel.html:15 templates/stats.html:40
+msgid "Upgrade now!"
+msgstr ""
+
+#: templates/side_panel.html:19
+msgid "With SX Enterprise, you can manage multiple virtual clusters."
+msgstr ""
+
+#: templates/side_panel.html:24
+msgid "Current cluster:"
+msgstr ""
+
+#: templates/side_panel.html:30
+#, python-format
+msgid ""
+"\n"
+"                        %(cluster_usage)s used\n"
+"                    "
+msgstr ""
+
+#: templates/side_panel.html:37
+#, python-format
+msgid ""
+"\n"
+"                    List of clusters (%(count)s)\n"
+"                "
+msgstr ""
+
+#: templates/side_panel.html:59
+msgid "There are no clusters yet"
+msgstr ""
+
+#: templates/stats.html:14
+msgid "Select interval"
+msgstr ""
+
+#: templates/stats.html:17
+msgid "3h"
+msgstr ""
+
+#: templates/stats.html:18
+msgid "24h"
+msgstr ""
+
+#: templates/stats.html:19
+msgid "1w"
+msgstr ""
+
+#: templates/stats.html:20
+msgid "1m"
+msgstr ""
+
+#: templates/stats.html:26
+msgid "Refresh"
+msgstr ""
+
+#: templates/stats.html:29
+msgid "Live graphs"
+msgstr ""
+
+#: templates/stats.html:34
+msgid "Loading statistics..."
+msgstr ""
+
+#: templates/stats.html:38
+msgid "Upgrade to SX Enterprise to enable more graphs."
+msgstr ""
+
+#: templates/superadmin_home.html:14
+msgid "Cluster info"
+msgstr ""
+
+#: templates/superadmin_home.html:16
+msgctxt "cluster url"
+msgid "host"
+msgstr ""
+
+#: templates/superadmin_home.html:18
+msgctxt "cluster port"
+msgid "port"
+msgstr ""
+
+#: templates/superadmin_home.html:27
+msgid "Cluster size (virtual)"
+msgstr ""
+
+#: templates/superadmin_home.html:32
+msgid "Cluster size (physical)"
+msgstr ""
+
+#: templates/superadmin_home.html:35 templates/superadmin_home.html.py:67
+msgid "unavailable"
+msgstr ""
+
+#: templates/superadmin_home.html:45
+msgid "Virtual clusters"
+msgstr ""
+
+#: templates/superadmin_home.html:59
+msgid "Usage (pre-replica)"
+msgstr ""
+
+#: templates/superadmin_home.html:64
+msgid "Usage (post-replica)"
+msgstr ""
+
+#: templates/superadmin_home.html:81
+#, python-format
+msgid ""
+"\n"
+"                        Zone %(num)s\n"
+"                    "
+msgstr ""
+
+#: templates/superadmin_home.html:90
+#, python-format
+msgid ""
+"\n"
+"                                    Node %(ip)s\n"
+"                                "
+msgstr ""
+
+#: templates/superadmin_home.html:94
+#, python-format
+msgid ""
+"\n"
+"                                        <small>(inter-node: %(ip)s)</small>\n"
+"                                    "
+msgstr ""
+
+#: templates/superadmin_home.html:101
+msgid "This node is down!"
+msgstr ""
+
+#: templates/superadmin_home.html:108
+#, python-format
+msgid ""
+"\n"
+"                                        Node %(ip)s\n"
+"                                    "
+msgstr ""
+
+#: templates/superadmin_home.html:112
+#, python-format
+msgid ""
+"\n"
+"                                            <small>(inter-node: %(ip)s)</"
+"small>\n"
+"                                        "
+msgstr ""
+
+#: templates/superadmin_home.html:123
+msgid "System"
+msgstr ""
+
+#: templates/superadmin_home.html:126
+msgid "Local time"
+msgstr ""
+
+#: templates/superadmin_home.html:131
+msgid "CPU Cores"
+msgstr ""
+
+#: templates/superadmin_home.html:134
+msgid "RAM"
+msgstr ""
+
+#: templates/superadmin_home.html:137
+msgid "Disk usage"
+msgstr ""
+
+#: templates/superadmin_home.html:139
+#, python-format
+msgid ""
+"\n"
+"                                                (%(free_space)s free)\n"
+"                                            "
+msgstr ""
+
+#: templates/superadmin_home.html:143
+msgid "Virtual size"
+msgstr ""
+
+#: templates/superadmin_home.html:150
+msgid "SX version"
+msgstr ""
+
+#: templates/superadmin_home.html:153
+msgid "SX-Storage version"
+msgstr ""
+
+#: templates/superadmin_home.html:158
+msgid "Node UUID"
+msgstr ""
+
+#: templates/superadmin_home.html:161
+msgid "SX-Storage path"
+msgstr ""
+
+#: templates/users/confirm_send_password_reset.html:4
+#, python-format
+msgid ""
+"\n"
+"    E-mail with password reset will be sent to <strong>%(email)s</strong>.\n"
+"    "
+msgstr ""
+
+#: templates/users/delete_user.html:4
+#, python-format
+msgid ""
+"\n"
+"        You are about to delete user <strong>%(email)s</strong>.\n"
+"    "
+msgstr ""
+
+#: templates/users/password_set.html:5
+msgid "Success!"
+msgstr ""
+
+#: templates/users/password_set.html:7
+#, python-format
+msgid ""
+"\n"
+"                Your password has been set. You can now log in to "
+"%(app_name)s.\n"
+"            "
+msgstr ""
+
+#: templates/users/token_invalid.html:5
+msgid "Invalid token"
+msgstr ""
+
+#: templates/users/token_invalid.html:7
+msgid ""
+"\n"
+"                You can't set your password because this token expired, or "
+"has\n"
+"                been already used up.\n"
+"            "
+msgstr ""
+
+#: templates/volumes/delete_volume.html:4
+#, python-format
+msgid ""
+"\n"
+"        You are about to delete volume <strong>%(volume)s</strong> in "
+"cluster\n"
+"        <strong>%(cluster)s</strong>.\n"
+"    "
+msgstr ""
+
+#: templates/volumes/delete_volume.html:13
+msgid ""
+"\n"
+"                <strong>This volume is not empty!</strong>\n"
+"                If you know what you are doing, enter its name below.\n"
+"            "
+msgstr ""
+
+#: templates/volumes/volume_acl.html:27
+msgid "New user"
+msgstr ""
+
+#: templates/volumes/volume_acl.html:31
+msgid "Loading..."
+msgstr ""
+
+#: users/forms.py:17
+msgid "Message"
+msgstr ""
+
+#: users/forms.py:22
+msgid "Save as default message"
+msgstr ""
+
+#: users/forms.py:35
+msgid ""
+"Please keep the \"{{link}}\" tag in the message. This is where the "
+"invitation link will be placed."
+msgstr ""
+
+#: users/forms.py:45
+msgid "Send an invitation e-mail"
+msgstr ""
+
+#: users/forms.py:46
+msgid "Set the user's password"
+msgstr ""
+
+#: users/forms.py:53 utils/forms.py:47
+msgid "Password"
+msgstr ""
+
+#: users/forms.py:54 utils/forms.py:48
+msgid "Confirm password"
+msgstr ""
+
+#: users/views.py:32
+msgid "Adding a new user"
+msgstr ""
+
+#: users/views.py:82 volumes/views.py:119
+msgid "Deleting {}"
+msgstr ""
+
+#: users/views.py:96
+msgid "Sending password reset"
+msgstr ""
+
+#: users/views.py:101
+msgid "You can't reset this user's password."
+msgstr ""
+
+#: users/views.py:106
+msgid "E-mail with password reset will be sent to {email}."
+msgstr ""
+
+#: users/views.py:116
+msgid "Password reset sent to {}"
+msgstr ""
+
+#: utils/decorators.py:22
+msgid "You can't do this while logged in."
+msgstr ""
+
+#: utils/forms.py:57
+msgid "Both passwords must match."
+msgstr ""
+
+#: utils/views.py:44
+msgid ""
+"You can't use this link because it expired, or has been already used up."
+msgstr ""
+
+#: utils/views.py:62
+msgid "Your password has been changed successfully."
+msgstr ""
+
+#: volumes/forms.py:20
+msgid "e.g. 100GB"
+msgstr ""
+
+#: volumes/forms.py:22
+msgid "Revisions"
+msgstr ""
+
+#: volumes/forms.py:46
+msgid "Encryption"
+msgstr ""
+
+#: volumes/forms.py:47
+msgid ""
+"Important: only users with Manager permission can initialize an encrypted "
+"volume.\n"
+"The user will be prompted to set a password on first upload."
+msgstr ""
+
+#: volumes/forms.py:82
+msgid "You entered a wrong name!"
+msgstr ""
+
+#: volumes/forms.py:103
+msgid "This user doesn't exist."
+msgstr ""
+
+#: volumes/forms.py:108
+msgid "Invalid permission type"
+msgstr ""
+
+#: volumes/validators.py:24
+msgid ""
+"You are running out of space on this cluster. Enter a smaller size and try "
+"again."
+msgstr ""
+
+#: volumes/validators.py:33
+msgid "This volume already exists."
+msgstr ""
+
+#: volumes/views.py:29
+msgid "Adding a new volume"
+msgstr ""
+
+#: volumes/views.py:74
+msgid "Updating {}"
+msgstr ""

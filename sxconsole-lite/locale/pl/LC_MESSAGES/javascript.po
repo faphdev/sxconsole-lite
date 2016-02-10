@@ -1,0 +1,92 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid ""
+"If one node of the cluster dies, the data stored in this volume will become "
+"unavailable. Recommended value: 2 or greater."
+msgstr ""
+"Jeżeli jeden z węzłów klastra zostanie uszkodzony, dane przechowywane na "
+"tym woluminie staną się niedostępne. Zalecana wartość: 2 lub większa."
+
+msgid "Loading volumes..."
+msgstr "Ładowanie woluminów..."
+
+msgid "Failed to load volumes."
+msgstr "Wystąpił problem podczas pobierania woluminów."
+
+msgid "Retry"
+msgstr "Spróbuj ponownie"
+
+msgid "There are no volumes yet"
+msgstr "Brak woluminów"
+
+msgid "Index"
+msgstr "Indeksowanie"
+
+msgid "Name"
+msgstr "Nazwa"
+
+msgid "Usage"
+msgstr "Zajęte miejsce"
+
+msgid "Size"
+msgstr "Rozmiar"
+
+msgid "Replicas"
+msgstr "Liczba replik"
+
+msgid "Revs"
+msgstr "Rewizje"
+
+msgid "Actions"
+msgstr "Operacje"
+
+msgid "This volume is encrypted"
+msgstr "Ten wolumin jest zaszyfrowany"
+
+msgid "Manage ACL"
+msgstr "Zarządzaj uprawnieniami"
+
+msgid "Settings"
+msgstr "Ustawienia"
+
+msgid "Delete"
+msgstr "Usuń"
+
+msgid "Used space"
+msgstr "Zajęte miejsce"
+
+msgid "Disk free"
+msgstr "Wolne miejsce"
+
+msgid "Disk usage"
+msgstr "Zajęte miejsce"
+
+msgid "There are no users yet"
+msgstr "Brak użytkowników"
+
+msgid "Username"
+msgstr "Nazwa użytkownika"
+
+msgid "Permissions"
+msgstr "Uprawnienia"
+
+msgid "Read"
+msgstr "Odczyt"
+
+msgid "Write"
+msgstr "Zapis"
+
+msgid "Manager"
+msgstr "Zarządzanie"
+
+msgid "The user can read files on the volume"
+msgstr "Użytkownik może odczytać pliki na woluminie"
+
+msgid "The user can modify files on the volume"
+msgstr "Użytkownik może modyfikować pliki na woluminie"
+
+msgid "The user can manage permissions of other users on this volume"
+msgstr "Użytkownik może zarządzać uprawnieniami innych użytkowników tego woluminu"

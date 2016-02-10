@@ -9,7 +9,7 @@ var collectKey = 'collect',
     processKey = 'process',
     command = process.argv[2],
     languages = ['en', 'de', 'it', 'pl'],
-    poFileTpl = path.join(__dirname, '../sx-translations/sxconsole',
+    poFileTpl = path.join(__dirname, 'locale',
                           '{lang}/LC_MESSAGES/javascript.po');
 
 if (command == collectKey) {

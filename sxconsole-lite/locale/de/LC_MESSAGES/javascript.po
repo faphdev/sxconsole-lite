@@ -1,0 +1,94 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid ""
+"If one node of the cluster dies, the data stored in this volume will become "
+"unavailable. Recommended value: 2 or greater."
+msgstr ""
+"Wenn ein Knoten des Clusters ausfällt, ist das Volume nicht mehr "
+"Verfügbar.Empfohlener Wert: 2 oder größer."
+
+msgid "Loading volumes..."
+msgstr "Läd Volumes..."
+
+msgid "Failed to load volumes."
+msgstr "Volumes konnten nicht geladen werden."
+
+msgid "Retry"
+msgstr "Wiederholen"
+
+msgid "There are no volumes yet"
+msgstr "Es gibt noch keine Volumes."
+
+msgid "Index"
+msgstr "Index"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Usage"
+msgstr "Verwendung"
+
+msgid "Size"
+msgstr "Größe"
+
+msgid "Replicas"
+msgstr "Kopien"
+
+msgid "Revs"
+msgstr "Versionen"
+
+msgid "Actions"
+msgstr "Aktionen"
+
+msgid "This volume is encrypted"
+msgstr "Das Laufwerk ist verschlüsselt"
+
+msgid "Manage ACL"
+msgstr "Verwalte ACL"
+
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgid "Delete"
+msgstr "Löschen"
+
+msgid "Used space"
+msgstr "Verwendeter Speicherplatz"
+
+msgid "Disk free"
+msgstr "Freier Speicher"
+
+msgid "Disk usage"
+msgstr "Belegter Speicher"
+
+msgid "There are no users yet"
+msgstr "Es gibt keine anderen Benutzer"
+
+msgid "Username"
+msgstr "Benutzername"
+
+msgid "Permissions"
+msgstr "Berechtigungen"
+
+msgid "Read"
+msgstr "Lesen"
+
+msgid "Write"
+msgstr "Schreiben"
+
+msgid "Manager"
+msgstr "Verwalten"
+
+msgid "The user can read files on the volume"
+msgstr "Der Benutzer kann Dateien in dem Volumes lesen"
+
+msgid "The user can modify files on the volume"
+msgstr "Der Benutzer kann Dateien in dem Volume verändern"
+
+msgid "The user can manage permissions of other users on this volume"
+msgstr ""
+"Der Benutzer kann Berechtigungen anderer Benutzer auf diesem Volume "
+"verändern"

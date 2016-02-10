@@ -1,0 +1,934 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-10 15:45+0000\n"
+"PO-Revision-Date: 2016-02-10 HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: accounts/forms.py:19
+msgid ""
+"Please enter a correct email and password. Note that both fields may be case-"
+"sensitive."
+msgstr ""
+"Bitte gib eine korreke E-Mail und Passwort an. Beachte Groß- und "
+"Kleinschreibung."
+
+#: accounts/forms.py:22
+msgid "Remember me"
+msgstr "Angemeldet bleiben"
+
+#: accounts/forms.py:48
+msgid "There is no user with this e-mail address."
+msgstr "Es gibt keinen Nutzer mit dieser E-Mail Adresse"
+
+#: accounts/forms.py:65 templates/clusters/cluster.html:11
+#: templates/clusters/cluster.html.py:72
+msgid "SX Enterprise only"
+msgstr "Nur SX Enterprise"
+
+#: accounts/forms.py:72
+msgid "Current password"
+msgstr "Aktuelles Passwort"
+
+#: accounts/forms.py:81
+msgid "New password"
+msgstr "Neues Passwort"
+
+#: accounts/forms.py:86
+msgid "Please enter your password."
+msgstr "Passwort wiederholen"
+
+#: accounts/models.py:25
+msgid "Admin"
+msgstr "Admin"
+
+#: accounts/models.py:26
+msgid "Root Admin"
+msgstr "Root Admin"
+
+#: accounts/models.py:34 utils/forms.py:32
+msgid "Email"
+msgstr "E-Mail"
+
+#: accounts/models.py:35 templates/accounts/admin_list.html:24
+msgid "Level"
+msgstr "Ebene"
+
+#: accounts/models.py:61 users/models.py:40
+msgid "{app_name} password reset"
+msgstr "{app_name} Passwort zurücksetzen"
+
+#: accounts/models.py:74 users/models.py:50
+msgid "Welcome to {app_name}!"
+msgstr "Willkommen bei {app_name}!"
+
+#: accounts/views.py:29 templates/accounts/login_buttons.html:4
+msgid "Login"
+msgstr "Anmelden"
+
+#: accounts/views.py:50 templates/header.html:24
+msgid "Profile"
+msgstr "Profil"
+
+#: accounts/views.py:57 templates/accounts/profile.html:18
+msgid "Change password"
+msgstr "Passwort ändern"
+
+#: accounts/views.py:92 users/views.py:142
+msgid "Welcome"
+msgstr "Willkommen"
+
+#: accounts/views.py:97 users/views.py:147
+msgid ""
+"Welcome to {app_name}! First, you have to set a password for your account."
+msgstr ""
+"Willkommen bei {app_name}! Zunächst musst Du ein Passwort für Dein Konto "
+"setzen"
+
+#: accounts/views.py:104 users/views.py:154
+msgid "Password reset"
+msgstr "Passwort zurücksetzen"
+
+#: accounts/views.py:105 users/views.py:155
+msgid "Enter a new password."
+msgstr "Gib ein neues Passwort ein"
+
+#: accounts/views.py:114
+msgid "Forgot your password?"
+msgstr "Passwort vergessen?"
+
+#: accounts/views.py:115
+msgid ""
+"Enter your e-mail address. We'll send you a link to recover your account."
+msgstr ""
+"Bitte gib Deine E-Mail Adresse ein. Wir schicken Dir einen Link um den "
+"Zugriff auf Dein Konto wiederherzustellen."
+
+#: accounts/views.py:123
+msgid ""
+"We have sent you an e-mail with instructions on resetting your password."
+msgstr ""
+"Wir haben Dir eine E-Mail mit Anweisungen zum Zurücksetzen Deines Passworts "
+"geschickt."
+
+#: accounts/views.py:143 templates/accounts/admin_list.html:8
+#: templates/clusters/cluster.html:72
+msgid "Administrators"
+msgstr "Administratoren"
+
+#: accounts/views.py:152
+msgid "Invite"
+msgstr "Einladen"
+
+#: accounts/views.py:159 users/views.py:70
+msgid "Invitation has been sent to {}"
+msgstr "Die Einladung wurde an {} gesendet."
+
+#: accounts/views.py:174
+msgid "Deleting {email}"
+msgstr "Lösche {email}"
+
+#: clusters/models.py:30
+msgid "Your cluster"
+msgstr "Dein Cluster"
+
+#: clusters/models.py:48 clusters/models.py:59
+msgid "{usage} of {size} ({percentage}%)"
+msgstr "{usage} von {size} ({percentage}%)"
+
+#: sxconsole/core.py:60
+msgid ""
+"Name should consist of at least two characters and include only alphanumeric "
+"characters, hyphen and underscore."
+msgstr ""
+"Der Name sollte aus mindestens zwei Zeichen bestehen. Es sind nur "
+"Buchstaben, Zahlen, Bind- und Unterstrich erlaubt."
+
+#: sxconsole/core.py:71
+#, fuzzy
+#| msgid "Size must be at least 1MB."
+msgid "Size must be either 0 or at least 1MB."
+msgstr "Die Größe muss mindestens 1 MB sein."
+
+#: sxconsole/core.py:78
+msgid "Replicas must be between {min} and {max}."
+msgstr "Anzahl der Kopien muss zwischen {min} und {max} sein."
+
+#: sxconsole/core.py:97
+msgid "Revisions must be between {min} and {max}."
+msgstr "Anzahl der Versionen muss zwischen {min} und {max} sein."
+
+#: sxconsole/core.py:145
+msgid "Connection to the cluster failed."
+msgstr "Verbindung zum Cluster Fehlgeschlagen"
+
+#: sxconsole/core.py:150
+msgid "Volume size should be between {min} and {max}."
+msgstr "Volume-Größe sollte zwischen {min} und {max} sein."
+
+#: sxconsole/core.py:156
+msgid ""
+"An error occurred while processing your request. Please try again later."
+msgstr ""
+"Ein Fehler ist beim Verarbeiten Deiner Anfrage aufgetreten. Bitte versuche "
+"es später erneut."
+
+#: sxconsole/msgs.py:8
+msgid "An error occurred while sending e-mail. Please try again later."
+msgstr ""
+"Ein Fehler ist beim Senden der E-Mail aufgetreten. Bitte versuche es später "
+"erneut."
+
+#: sxconsole/settings.py:207
+msgid "English"
+msgstr "English"
+
+#: sxconsole/settings.py:208
+msgid "German"
+msgstr "Deutsch"
+
+#: sxconsole/settings.py:209
+msgid "Italian"
+msgstr "Italiano"
+
+#: sxconsole/settings.py:210
+msgid "Polish"
+msgstr "Polski"
+
+#: sxconsole/views.py:26 templates/header.html:13
+#: templates/superadmin_home.html:8
+msgid "Dashboard"
+msgstr "Übersicht"
+
+#: sxconsole/views.py:128 templates/stats.html:8
+msgid "Statistics"
+msgstr "Statistik"
+
+#: templates/404.html:11
+msgid ""
+"\n"
+"        We are sorry, but the page you tried to access is not available.\n"
+"        "
+msgstr ""
+"\n"
+"        Es tut uns leid, aber die angeforderte Seite ist nicht verfügbar.\n"
+"        "
+
+#: templates/accounts/admin_list.html:12
+msgid "Invite an admin"
+msgstr "Lade einen Administrator ein"
+
+#: templates/accounts/admin_list.html:23
+msgid "E-mail"
+msgstr "E-Mail"
+
+#: templates/accounts/admin_list.html:25 templates/clusters/cluster.html:91
+#: templates/clusters/cluster.html:148
+msgid "Actions"
+msgstr "Aktionen"
+
+#: templates/accounts/admin_list.html:39 templates/clusters/cluster.html:16
+#: templates/clusters/cluster.html:122 templates/clusters/cluster.html:166
+#: templates/delete.html:29
+msgid "Delete"
+msgstr "Löschen"
+
+#: templates/accounts/login_buttons.html:7
+msgid "Forgot password?"
+msgstr "Passwort vergessen?"
+
+#: templates/accounts/profile.html:9
+#, python-format
+msgid ""
+"\n"
+"                        Hello, %(user)s!\n"
+"                    "
+msgstr ""
+"\n"
+"                        Hallo %(user)s!\n"
+"                    "
+
+#: templates/accounts/profile.html:25 templates/public_base.html:19
+msgid "Change language"
+msgstr "Sprache ändern"
+
+#: templates/cluster_unavailable.html:5
+msgid "Cluster unavailable"
+msgstr "Cluster nicht verfügbar"
+
+#: templates/cluster_unavailable.html:7
+msgid ""
+"\n"
+"                Failed to connect to SX cluster. Please check your "
+"configuration\n"
+"                and make sure that at least one node is running.\n"
+"            "
+msgstr ""
+"\n"
+"                Verbindung zum SX Cluster fehlgeschlagen. Prüfe die "
+"Konfiguration\n"
+"                und stelle sicher, dass mindestens ein Knoten aktiv ist.\n"
+"            "
+
+#: templates/clusters/cluster.html:13 templates/clusters/cluster.html:118
+#: templates/volumes/edit_volume.html:7
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: templates/clusters/cluster.html:24
+msgid "Unlimited"
+msgstr "Unbegrenzt"
+
+#: templates/clusters/cluster.html:29 templates/clusters/cluster.html.py:70
+msgid "Volumes"
+msgstr "Volumes"
+
+#: templates/clusters/cluster.html:31
+#, python-format
+msgid ""
+"\n"
+"                        %(volumes)s of %(limit)s\n"
+"                    "
+msgstr ""
+"\n"
+"                        %(volumes)s von %(limit)s\n"
+"                    "
+
+#: templates/clusters/cluster.html:40 templates/clusters/cluster.html.py:71
+#: templates/volumes/volume_acl.html:24
+msgid "Users"
+msgstr "Benutzer"
+
+#: templates/clusters/cluster.html:42
+#, python-format
+msgid ""
+"\n"
+"                        %(users)s of %(limit)s\n"
+"                    "
+msgstr ""
+"\n"
+"                        %(users)s von %(limit)s\n"
+"                    "
+
+#: templates/clusters/cluster.html:51 templates/superadmin_home.html:50
+msgid "Allocated size"
+msgstr "Verwendeter Speicher"
+
+#: templates/clusters/cluster.html:60 templates/clusters/cluster.html.py:87
+msgid "Usage"
+msgstr "In Verwendung"
+
+#: templates/clusters/cluster.html:79
+msgid "Add a volume"
+msgstr "Volume hinzufügen"
+
+#: templates/clusters/cluster.html:86 volumes/forms.py:41 volumes/forms.py:71
+msgid "Name"
+msgstr "Name"
+
+#: templates/clusters/cluster.html:88 volumes/forms.py:19
+msgid "Size"
+msgstr "Größe"
+
+#: templates/clusters/cluster.html:89 volumes/forms.py:43
+msgid "Replicas"
+msgstr "Kopien"
+
+#: templates/clusters/cluster.html:90
+msgid "Revs"
+msgstr ""
+
+#: templates/clusters/cluster.html:101
+msgid "This volume is encrypted"
+msgstr ""
+
+#: templates/clusters/cluster.html:114
+msgid "Manage ACL"
+msgstr ""
+
+#: templates/clusters/cluster.html:132
+#, fuzzy
+#| msgid "There are no clusters yet"
+msgid "There are no volumes yet"
+msgstr "Es gibt noch keine Cluster"
+
+#: templates/clusters/cluster.html:139
+msgid "Add a user"
+msgstr "Benutzer hinzufügen"
+
+#: templates/clusters/cluster.html:147
+#, fuzzy
+#| msgid "Cluster name"
+msgid "Username"
+msgstr "Cluster Name"
+
+#: templates/clusters/cluster.html:162
+#, fuzzy
+#| msgid "New password"
+msgid "Reset password"
+msgstr "Neues Passwort"
+
+#: templates/clusters/cluster.html:178
+#, fuzzy
+#| msgid "There are no clusters yet"
+msgid "There are no users yet"
+msgstr "Es gibt noch keine Cluster"
+
+#: templates/confirm.html:8
+msgid "Confirmation needed"
+msgstr "Bestätigung erforderlich"
+
+#: templates/confirm.html:23 templates/delete.html:26
+#: templates/includes/form.html:24 templates/users/user_form.html:33
+#: templates/volumes/volume_acl.html:16
+msgid "Go back"
+msgstr "Zurück"
+
+#: templates/confirm.html:26
+msgctxt "brief reply to a question"
+msgid "Correct"
+msgstr "Ja"
+
+#: templates/delete.html:8
+msgid "Heads up!"
+msgstr "Achtung!"
+
+#: templates/delete.html:14
+#, python-format
+msgid ""
+"\n"
+"                        You are about to delete <strong>%(object)s</"
+"strong>.\n"
+"                    "
+msgstr ""
+"\n"
+"                        Du bist dabei <strong>%(object)s</strong> zu "
+"löschen.\n"
+"                    "
+
+#: templates/delete.html:18
+msgid "Do you wish to continue?"
+msgstr "Möchtest Du fortfahren?"
+
+#: templates/header.html:17
+msgid "Stats"
+msgstr "Statistiken"
+
+#: templates/header.html:20
+msgid "Admins"
+msgstr "Administratoren"
+
+#: templates/header.html:34
+msgid "Logout"
+msgstr "Abmelden"
+
+#: templates/includes/demo_footer.html:4
+msgid ""
+"\n"
+"            This is a demo. Many functionalities are partially or "
+"completely\n"
+"            disabled to prevent abuse.\n"
+"        "
+msgstr ""
+"\n"
+"            Dies ist eine Demo. Viele Funktionen sind teilweise oder "
+"vollständig\n"
+"            eingeschränkt um Missbrauch zu verhindern.\n"
+"        "
+
+#: templates/includes/form.html:28 templates/users/user_form.html:36
+msgid "Submit"
+msgstr "OK"
+
+#: templates/mail/invite.html:1
+#, python-format
+msgid ""
+"\n"
+"You have been invited to %(app_name)s.\n"
+"\n"
+"Click the link below to join:\n"
+"%(link)s\n"
+msgstr ""
+"\n"
+"Du wurdest zu %(app_name)s eingeladen.\n"
+"\n"
+"Klicke den folgenden Link an, um beizutreten:\n"
+"%(link)s\n"
+
+#: templates/mail/password_reset.html:1
+#, python-format
+msgid ""
+"\n"
+"You have requested a password reset for your %(app_name)s account.\n"
+"\n"
+"Click the link below to recover your account:\n"
+"%(link)s\n"
+msgstr ""
+"\n"
+"Du hast das Zurücksetzen Deines Passworts für %(app_name)s angefordert.\n"
+"\n"
+"Klicke den folgenden Link, um das Passwort zurückzusetzen:\n"
+"%(link)s\n"
+
+#: templates/side_panel.html:15 templates/stats.html:40
+msgid "Upgrade now!"
+msgstr "Jetzt upgraden!"
+
+#: templates/side_panel.html:19
+msgid "With SX Enterprise, you can manage multiple virtual clusters."
+msgstr "Mit SX Enterprise können mehrere virtuelle cluster verwaltet werden."
+
+#: templates/side_panel.html:24
+msgid "Current cluster:"
+msgstr "Ausgewählter Cluster"
+
+#: templates/side_panel.html:30
+#, python-format
+msgid ""
+"\n"
+"                        %(cluster_usage)s used\n"
+"                    "
+msgstr ""
+"\n"
+"                        %(cluster_usage)s benutzt\n"
+"                    "
+
+#: templates/side_panel.html:37
+#, python-format
+msgid ""
+"\n"
+"                    List of clusters (%(count)s)\n"
+"                "
+msgstr ""
+"\n"
+"                    Liste mit (%(count)s) Knoten\n"
+"                    "
+
+#: templates/side_panel.html:59
+msgid "There are no clusters yet"
+msgstr "Es gibt noch keine Cluster"
+
+#: templates/stats.html:14
+msgid "Select interval"
+msgstr "Zeitraum auswählen"
+
+#: templates/stats.html:17
+msgid "3h"
+msgstr "3h"
+
+#: templates/stats.html:18
+msgid "24h"
+msgstr "24h"
+
+#: templates/stats.html:19
+msgid "1w"
+msgstr "1 W"
+
+#: templates/stats.html:20
+msgid "1m"
+msgstr "1 M"
+
+#: templates/stats.html:26
+msgid "Refresh"
+msgstr "Aktualisieren"
+
+#: templates/stats.html:29
+msgid "Live graphs"
+msgstr "Live Graph"
+
+#: templates/stats.html:34
+msgid "Loading statistics..."
+msgstr "Läd Statistiken..."
+
+#: templates/stats.html:38
+msgid "Upgrade to SX Enterprise to enable more graphs."
+msgstr "Führe ein Upgrade auf SX Enterprise für mehr Funktionen durch."
+
+#: templates/superadmin_home.html:14
+msgid "Cluster info"
+msgstr "Cluster Infos"
+
+#: templates/superadmin_home.html:16
+msgctxt "cluster url"
+msgid "host"
+msgstr "Host"
+
+#: templates/superadmin_home.html:18
+msgctxt "cluster port"
+msgid "port"
+msgstr "Port"
+
+#: templates/superadmin_home.html:27
+msgid "Cluster size (virtual)"
+msgstr "Clustergröße (virtuell)"
+
+#: templates/superadmin_home.html:32
+msgid "Cluster size (physical)"
+msgstr "Clustergröße (physisch)"
+
+#: templates/superadmin_home.html:35 templates/superadmin_home.html.py:67
+msgid "unavailable"
+msgstr "nicht verfügbar"
+
+#: templates/superadmin_home.html:45
+msgid "Virtual clusters"
+msgstr "Virtuelle Cluster"
+
+#: templates/superadmin_home.html:59
+msgid "Usage (pre-replica)"
+msgstr "Verwendung (vor Replikation)"
+
+#: templates/superadmin_home.html:64
+msgid "Usage (post-replica)"
+msgstr "Verwendung (nach Replikation)"
+
+#: templates/superadmin_home.html:81
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "                        Hello, %(user)s!\n"
+#| "                    "
+msgid ""
+"\n"
+"                        Zone %(num)s\n"
+"                    "
+msgstr ""
+"\n"
+"                        Hallo %(user)s!\n"
+"                    "
+
+#: templates/superadmin_home.html:90
+#, python-format
+msgid ""
+"\n"
+"                                    Node %(ip)s\n"
+"                                "
+msgstr ""
+"\n"
+"                                    Knoten %(ip)s\n"
+"                                "
+
+#: templates/superadmin_home.html:94
+#, python-format
+msgid ""
+"\n"
+"                                        <small>(inter-node: %(ip)s)</small>\n"
+"                                    "
+msgstr ""
+"\n"
+"                                        <small>(interne Knoten-IP: %(ip)s)</"
+"small>\n"
+"                                    "
+
+#: templates/superadmin_home.html:101
+msgid "This node is down!"
+msgstr "Der Knoten ist aus!"
+
+#: templates/superadmin_home.html:108
+#, python-format
+msgid ""
+"\n"
+"                                        Node %(ip)s\n"
+"                                    "
+msgstr ""
+"\n"
+"                                        Knoten %(ip)s\n"
+"                                    "
+
+#: templates/superadmin_home.html:112
+#, python-format
+msgid ""
+"\n"
+"                                            <small>(inter-node: %(ip)s)</"
+"small>\n"
+"                                        "
+msgstr ""
+"\n"
+"                                        <small>(Knoten-Verbindung: %(ip)s)</"
+"small>\n"
+"                                    "
+
+#: templates/superadmin_home.html:123
+msgid "System"
+msgstr "System"
+
+#: templates/superadmin_home.html:126
+msgid "Local time"
+msgstr "Lokale Zeit"
+
+#: templates/superadmin_home.html:131
+msgid "CPU Cores"
+msgstr "CPU Kerne"
+
+#: templates/superadmin_home.html:134
+msgid "RAM"
+msgstr "RAM"
+
+#: templates/superadmin_home.html:137
+msgid "Disk usage"
+msgstr "Festplattenbelegung"
+
+#: templates/superadmin_home.html:139
+#, python-format
+msgid ""
+"\n"
+"                                                (%(free_space)s free)\n"
+"                                            "
+msgstr ""
+"\n"
+"                                                (%(free_space)s frei)\n"
+"                                            "
+
+#: templates/superadmin_home.html:143
+msgid "Virtual size"
+msgstr "Virutelle Größe"
+
+#: templates/superadmin_home.html:150
+msgid "SX version"
+msgstr "SX Version"
+
+#: templates/superadmin_home.html:153
+msgid "SX-Storage version"
+msgstr "SX-Storage Version"
+
+#: templates/superadmin_home.html:158
+msgid "Node UUID"
+msgstr "Knoten UUID"
+
+#: templates/superadmin_home.html:161
+msgid "SX-Storage path"
+msgstr "SX-Storage Pfad"
+
+#: templates/users/confirm_send_password_reset.html:4
+#, python-format
+msgid ""
+"\n"
+"    E-mail with password reset will be sent to <strong>%(email)s</strong>.\n"
+"    "
+msgstr ""
+"\n"
+"     Eine E-Mail zum Zurücksetzen des Passworts wurde an <strong>%(email)s</"
+"strong> gesendet.\n"
+"    "
+
+#: templates/users/delete_user.html:4
+#, python-format
+msgid ""
+"\n"
+"        You are about to delete user <strong>%(email)s</strong>.\n"
+"    "
+msgstr ""
+"\n"
+"        Du löscht gerade den Benutzer <strong>%(email)s</strong>.\n"
+"    "
+
+#: templates/users/password_set.html:5
+msgid "Success!"
+msgstr "Fertig!"
+
+#: templates/users/password_set.html:7
+#, python-format
+msgid ""
+"\n"
+"                Your password has been set. You can now log in to "
+"%(app_name)s.\n"
+"            "
+msgstr ""
+"\n"
+"                Dein Passwort wurde gesetzt. Du kannst dich jetzt bei "
+"%(app_name)s einloggen.\n"
+"            "
+
+#: templates/users/token_invalid.html:5
+msgid "Invalid token"
+msgstr "Ungültiges token"
+
+#: templates/users/token_invalid.html:7
+msgid ""
+"\n"
+"                You can't set your password because this token expired, or "
+"has\n"
+"                been already used up.\n"
+"            "
+msgstr ""
+"\n"
+"                Du kannst Dein Passwort nicht setzen, da das Token bereits "
+"abgelaufen oder \n"
+"                verwendet wurde.\n"
+"            "
+
+#: templates/volumes/delete_volume.html:4
+#, python-format
+msgid ""
+"\n"
+"        You are about to delete volume <strong>%(volume)s</strong> in "
+"cluster\n"
+"        <strong>%(cluster)s</strong>.\n"
+"    "
+msgstr ""
+"\n"
+"        Du löscht gerade das Volume <strong>%(volume)s</strong>\n"
+"        vom Cluster %(cluster)s.\n"
+"    "
+
+#: templates/volumes/delete_volume.html:13
+msgid ""
+"\n"
+"                <strong>This volume is not empty!</strong>\n"
+"                If you know what you are doing, enter its name below.\n"
+"            "
+msgstr ""
+"\n"
+"                <strong>Das Volume ist nicht leer!</strong>\n"
+"                Wenn Du dir sicher bist, was du machst, gib den Namen des "
+"Volumes unten ein.\n"
+"            "
+
+#: templates/volumes/volume_acl.html:27
+msgid "New user"
+msgstr "Neuer Benutzer"
+
+#: templates/volumes/volume_acl.html:31
+msgid "Loading..."
+msgstr "Läd..."
+
+#: users/forms.py:17
+msgid "Message"
+msgstr "Nachricht"
+
+#: users/forms.py:22
+msgid "Save as default message"
+msgstr "Als Standardnachricht speichern"
+
+#: users/forms.py:35
+msgid ""
+"Please keep the \"{{link}}\" tag in the message. This is where the "
+"invitation link will be placed."
+msgstr ""
+"Bitte lasse \"{{link}}\" in der Nachricht. An dieser Stelle wird der Link "
+"zur Einladung platziert."
+
+#: users/forms.py:45
+msgid "Send an invitation e-mail"
+msgstr "Sende eine E-Mail zur Einladung"
+
+#: users/forms.py:46
+msgid "Set the user's password"
+msgstr "Setze das Passwort des Benutzers"
+
+#: users/forms.py:53 utils/forms.py:47
+msgid "Password"
+msgstr "Passwort"
+
+#: users/forms.py:54 utils/forms.py:48
+msgid "Confirm password"
+msgstr "Passwort bestätigen"
+
+#: users/views.py:32
+msgid "Adding a new user"
+msgstr "Neuen Benutzer hinzufügen"
+
+#: users/views.py:82 volumes/views.py:119
+msgid "Deleting {}"
+msgstr "Löscht {}"
+
+#: users/views.py:96
+msgid "Sending password reset"
+msgstr "Passwort zurücksetzen senden"
+
+#: users/views.py:101
+msgid "You can't reset this user's password."
+msgstr "Du kannst das Passwort des Benutzers nicht zurücksetzen."
+
+#: users/views.py:106
+msgid "E-mail with password reset will be sent to {email}."
+msgstr "Eine E-Mail zum Zurücksetzen des Passworts wird an {email} gesendet."
+
+#: users/views.py:116
+msgid "Password reset sent to {}"
+msgstr "Passwort zurücksetzen wurde an {} gesendet"
+
+#: utils/decorators.py:22
+msgid "You can't do this while logged in."
+msgstr "Du kannst dies nicht machen, solange Du angemeldet bist."
+
+#: utils/forms.py:57
+msgid "Both passwords must match."
+msgstr "Die Passwörter müssen identisch sein."
+
+#: utils/views.py:44
+msgid ""
+"You can't use this link because it expired, or has been already used up."
+msgstr ""
+"Du kannst diesen Link nicht mehr benutzen, da er abgelaufen ist oder bereits "
+"verwendet wurde."
+
+#: utils/views.py:62
+msgid "Your password has been changed successfully."
+msgstr "Dein Passwort wurde geändert."
+
+#: volumes/forms.py:20
+msgid "e.g. 100GB"
+msgstr "z. B. 100GB"
+
+#: volumes/forms.py:22
+msgid "Revisions"
+msgstr "Versionen"
+
+#: volumes/forms.py:46
+msgid "Encryption"
+msgstr "Verschlüsselung"
+
+#: volumes/forms.py:47
+msgid ""
+"Important: only users with Manager permission can initialize an encrypted "
+"volume.\n"
+"The user will be prompted to set a password on first upload."
+msgstr ""
+"Achtung: nur Benutzer mit Manager-Berechtigungen können ein verschlüsseltes "
+"Laufwerk initialisieren.\n"
+"Der Benutzer wird beim ersten Hochladen zur Eingabe des Passworts "
+"aufgefordert."
+
+#: volumes/forms.py:82
+msgid "You entered a wrong name!"
+msgstr "Du hast einen falschen Namen eingegeben!"
+
+#: volumes/forms.py:103
+msgid "This user doesn't exist."
+msgstr "Der Benutzer existiert nicht."
+
+#: volumes/forms.py:108
+msgid "Invalid permission type"
+msgstr "Ungültiger Berechtigungstyp"
+
+#: volumes/validators.py:24
+msgid ""
+"You are running out of space on this cluster. Enter a smaller size and try "
+"again."
+msgstr ""
+"Dein Cluster wird zu voll. Bitte versuche es mit einer kleineren Größe."
+
+#: volumes/validators.py:33
+msgid "This volume already exists."
+msgstr "Das Volume existiert bereits."
+
+#: volumes/views.py:29
+msgid "Adding a new volume"
+msgstr "Erstellt neues Volume"
+
+#: volumes/views.py:74
+msgid "Updating {}"
+msgstr "Aktualisiert {}"
