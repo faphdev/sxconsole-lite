@@ -2,13 +2,13 @@
 *.egg-info
 .log/
 
-.coverage
+/sxconsole-lite/.coverage
 .cache/
 
-/db.sqlite3
-/node_modules/
-/assets/build/
-/assets/i18n/**/*.json
-/static/
-
-/conf.yaml
+/sxconsole-lite/db.sqlite3
+/sxconsole-lite/node_modules/
+/sxconsole-lite/assets/build/
+/sxconsole-lite/assets/i18n/**/*.json
+/sxconsole-lite/locale/**/*.mo
+/sxconsole-lite/static/
+/sxconsole-lite/conf.yaml
