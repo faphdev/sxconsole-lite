@@ -14,8 +14,6 @@ def sx_console(request):
     context = {
         'BASE_TEMPLATE': 'base.html' if request.user.is_authenticated()
         else 'public_base.html',
-        'VERSION': subprocess.check_output(
-            ['git', 'rev-parse', '--short', 'HEAD']).strip(),
         'SKIN': settings.SKIN,
         'DEMO': settings.DEMO,
         'ENTERPRISE_URL': 'http://skylable.com/products/enterprise/',
