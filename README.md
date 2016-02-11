@@ -13,7 +13,7 @@ It will load the required images and start the containers.
 During the first run, you will be asked to provide configuration details for
 sxconsole.
 
-By default, SX Console will be running at `https://localhost:8888/`
+By default, SX Console will be running at `https://0.0.0.0:8888/`
 
 ### Creating your account
 Once the container is up and running, run `./add-admin.sh user@example.com
