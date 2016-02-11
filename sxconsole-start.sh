@@ -27,6 +27,7 @@ echo "Starting containers..."
 set -e
 docker run -d \
     -v /data/sxconsole-graphite:/var/lib/graphite/storage/whisper \
+    --name=sxconsole-graphite \
     skylable/sxconsole-graphite
 
 docker run -d \
@@ -34,6 +35,7 @@ docker run -d \
     -v /data/sxconsole-graphite:/var/lib/graphite/storage/whisper \
     -v /data/sxconsole-lite/logs:/srv/logs \
     -p :8888:443 \
+    --name=sxconsole-lite \
     --link sxconsole-graphite:sxconsole-graphite \
     skylable/sxconsole-lite
 
