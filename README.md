@@ -14,5 +14,5 @@ During the first run, you will be asked to provide configuration details for
 sxconsole.
 
 ### Creating your account
-Once the container is up and running, run `./add_admin.sh user@example.com
-password` to create your account
+Once the container is up and running, run `./add-admin.sh user@example.com
+password` to create your account.
