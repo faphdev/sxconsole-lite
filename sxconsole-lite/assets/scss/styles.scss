@@ -15,9 +15,6 @@
 .c3-legend-item {
     font-size: $font-size-base;
 }
-@import '~bootstrap-datepicker/dist/css/bootstrap-datepicker3.css';
-@import '~bootstrap-tagsinput/dist/bootstrap-tagsinput.css';
-@import '~bootstrap-tagsinput/dist/bootstrap-tagsinput-typeahead.css';
 
 .alert-error {
     @extend .alert-danger;
