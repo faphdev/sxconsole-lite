@@ -16,7 +16,7 @@ def sx_console(request):
         else 'public_base.html',
         'SKIN': settings.SKIN,
         'DEMO': settings.DEMO,
-        'ENTERPRISE_URL': 'http://skylable.com/products/enterprise/',
+        'ENTERPRISE_URL': 'http://skylable.com/pricing/',
     }
     if request.user.is_authenticated():
         clusters = [cluster]
